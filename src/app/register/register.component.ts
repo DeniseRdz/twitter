@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
   
   name: string;
   emailUser :string ;
+  lastName: string;
   passUser :string ;
   repeatPassUser :string;
 
@@ -33,10 +34,11 @@ export class RegisterComponent implements OnInit {
        
         var newObject = 
         {
-          name:this.name,email:this.emailUser, userId:data.user.uid
+          name:this.name,email:this.emailUser,lastName:this.lastName, userId:data.user.uid
          };
 
         this.addUser(newObject);
+        //this.router.navigateByUrl("/home");
     
       }).catch((error)=>{
         alert("Valio Riel");
@@ -68,6 +70,7 @@ addUser(user){
   this.repeatPassUser="";
   this.emailUser="";
   this.passUser="";
+  this.lastName="";
 
   this.router.navigateByUrl("/login");
 }

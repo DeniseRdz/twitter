@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -22,6 +23,7 @@ import { Profile } from '../../node_modules/@types/selenium-webdriver/firefox';
 import { TweetComponent } from './tweet/tweet.component';
 import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 //#endregion
 
@@ -31,6 +33,7 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'editProfile', component: EditProfileComponent},
   {path: 'resetPassword', component: ResetPasswordComponent}
 ];
 
@@ -42,11 +45,13 @@ const appRoutes: Routes = [
     ProfileComponent,
     TweetComponent,
     RegisterComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
+    NgbModule.forRoot(),
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features

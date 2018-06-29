@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <!-- LEFT SIDE TOP -->
-      <div class="col-3" style="background-color: white;">
+      <div id="left" class="col-3" style="background-color: white;">
         <div>
             <img class="profileBanner img-fluid" src="/assets/images/banner.jpg" alt="banner">
           </div>
@@ -55,13 +55,22 @@
         </div>
       </div>
       <!-- CENTER -->
-      <div id="center" class="col-6">
-        <img class="profilePictureMin" src="/assets/images/profile.png" alt="img" style="margin-top: 15px;">
-        <input type="text" class="form-control" placeholder="What's happening?">
-          
+      <div id="center" class="col-6" >
+        <div class="row">
+          <div class="col-2" style="padding-right: 0;">
+            <img class="profilePictureMin" src="/assets/images/profile.png" alt="img" style="margin-top: 15px;">
+          </div>
+          <div class="col-8" style="padding-left: 0; margin-top: 15px;">
+            <input type="text" class="form-control" maxlength="280" placeholder="What's happening?">
+          </div>
+          <div class="col-2" style="padding-left: 0;padding-top: 15px;">
+              <button class="btn btn-primary" (click)="tweet()">Tweet</button>
+            </div>
+        </div>
+        <app-tweet></app-tweet>
       </div>
       <!-- RIGHT SIDE TOP -->
-      <div class="col-3 paddTop10" style="background-color: white">
+      <div id="right" class="col-3 paddTop10" style="background-color: white">
         <div>
           <h5>Who to follow</h5>
         </div>
@@ -69,15 +78,13 @@
           <p>
           © 2018 Twitter About Help Center Terms Privacy policy Cookies Ads info Brand Blog Status Apps Jobs Marketing Businesses Developers
           </p>
+          
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-<ul>
+<!-- <ul>
   <li *ngFor="let item of userAll">{{item.name}}</li>
 </ul>
 
@@ -85,4 +92,4 @@
 
 <ul>
   <li *ngFor="let item of twetsAll">{{item.tweet}}</li>
-</ul>
+</ul> -->
