@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from '../users.service';
+import { TwetsService } from '../twets.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  userAll =[];
+  twetsAll = [];
+
+  constructor(public usersService:UsersService, public twetsService : TwetsService) {
+
+    const preview = this.usersService.getAllUsers();
+    preview.valueChanges().subscribe((user)=>{
+        this.userAll=user;
+    });
+    
+    const previewTwets = this.twetsService.getAllTwets();
+    previewTwets.valueChanges().subscribe((twet)=>{
+        this.twetsAll=twet;
+    });
+    console.log(this.twetsAll);
+
+   }
 
   ngOnInit() {
   }
