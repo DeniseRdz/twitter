@@ -1,7 +1,14 @@
+#left{
+    border-top: 10px solid #e6ecf0;
+}
 #center{
     background-color: white;
     padding-left: 15px;
     padding-right: 15px;
+    border: 10px solid #e6ecf0;
+}
+#right{
+    border-top: 10px solid #e6ecf0;
 }
 .bgColor{
     background-color: #e6ecf0;
