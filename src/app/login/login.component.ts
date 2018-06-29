@@ -11,34 +11,34 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
 
-  emailUser :string ;
-  passUser :string ;
+  emailUser: string ;
+  passUser: string ;
 
 
 
-  constructor(public router: Router,public authenticationService: AuthenticationsService) { }
+  constructor(public router: Router, public authenticationService: AuthenticationsService) { }
 
   ngOnInit() {
   }
 
-  login(){
- 
-    const promise = this.authenticationService.Login(this.emailUser,this.passUser);
-    promise.then((data) =>{
+  login() {
 
-      alert("Se inicio sección");
+    const promise = this.authenticationService.Login(this.emailUser, this.passUser);
+    promise.then((data) => {
+
+      alert('Se inicio sección');
       console.log(data);
-      this.router.navigateByUrl("/home");
+      this.router.navigateByUrl('/home');
 
-    }).catch((error)=>{
+    }).catch((error) => {
 
-      alert("Valio Riel");
+      alert('Valio Riel');
       console.log(error);
 
     });
 
-    this.emailUser="";
-    this.passUser="";
+    this.emailUser = '';
+    this.passUser = '';
 
   }
 

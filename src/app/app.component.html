@@ -32,7 +32,14 @@
                     <i class=" input-group-text  fas fa-search bgWhite  " id="basic-addon1"></i>
                 </div>
             </div>
-            <img class="col-2 d-flex justify-content-center borderRad" src="/assets/images/profileDefault.png" alt="img">
+            <img class="col-2 d-flex justify-content-center borderRad" src="/assets/images/profile.png" alt="img">
+            <div ngbDropdown class="d-inline-block">
+                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>X</button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                      <button class="dropdown-item" routerLink="/editProfile">Editar</button>
+                      <button class="dropdown-item" (click)="logOut()">LogOut</button>
+                    </div>
+                  </div>
             <button class="col-2 d-flex justify-content-center btn btn-success buttonRad textWhite fontSize" type="submit">Twittear</button>
     </div></div>
 </div>
