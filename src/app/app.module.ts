@@ -20,14 +20,18 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { ProfileComponent } from './profile/profile.component';
 import { Profile } from '../../node_modules/@types/selenium-webdriver/firefox';
 import { TweetComponent } from './tweet/tweet.component';
+import { RegisterComponent } from './register/register.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 //#endregion
 
 const appRoutes: Routes = [
-   {path: '', component: LoginComponent},
+  {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'profile', component: ProfileComponent}
+  {path: 'profile', component: ProfileComponent},
+  {path: 'register', component: RegisterComponent},
+  {path: 'resetPassword', component: ResetPasswordComponent}
 ];
 
 @NgModule({
@@ -36,7 +40,9 @@ const appRoutes: Routes = [
     LoginComponent,
     HomeComponent,
     ProfileComponent,
-    TweetComponent
+    TweetComponent,
+    RegisterComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
