@@ -1,15 +1,70 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light u-boxShadow">
-    <img src="" alt="" class="placeholderImage">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-
-      </form>
+<nav class="navbar navbar-expand-lg navbar-light bg-light u-boxShadow ">
+  <img alt="Brand" class="placeholderImage" src="assets/images/twitter.png">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse ProfileNav-stat" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item ProfileNav-value">
+        <a class="nav-link" href="#">Tweets</a>
+        <div id="Tweets" align="center">{{userTweets.length}}</div>
+      </li>
+      <li class="nav-item ProfileNav-value">
+        <a class="nav-link" href="#">Following</a>
+        <div id="Following" align="center">233</div>
+      </li>
+      <li class="nav-item ProfileNav-value">
+        <a class="nav-link" href="#">Followers</a>
+        <div id="Followers" align="center">42</div>
+      </li>
+      <li class="nav-item ProfileNav-value">
+        <a class="nav-link" href="#">Likes</a>
+        <div id="Likes" align="center">512</div>
+      </li>
+      <li class="nav-item ProfileNav-value">
+        <a class="nav-link" href="#">Lists</a>
+        <div id="Lists" align="center">12</div>
+      </li>
+      <li class="nav-item ProfileNav-value">
+        <a class="nav-link" href="#">Moments</a>
+        <div id="moments" align="center">2</div>
+      </li>
+    </ul>
+    <div class="navbarbutton">
+        <button type="button" class="EdgeButton--secondary">
+            <span aria-hidden="true">Follow</span>
+        </button>
     </div>
-  </nav>
+
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 .u-boxShadow">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" id="TweeterProfile"><b><a href="" style="color:black">Profile</a></b></h5>
+              <h6 class="card-subtitle mb-2 text-muted" id="TweeterSubProfile"><a href="" style="color:gray">@tweet</a></h6>
+              <div class="card-text" id="BroadCast"><a href=""style="color:green">viewBroadcasts</a> </div>
+              <div href="#" class="card-columns" id="TweeterProfileJoined">Card link</div>
+              <div href="#" class="card-columns" id="TweeterProfileBD">Card link</div>
+            </div>
+          </div>
+    </div>
+    <div class="col-md-5 .u-boxShadow">
+      <div class="col-md-12 .u-boxShadow" *ngFor="let item of userTweets">
+          <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">{{item.userId}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted"> {{item.date}} {{item.hour}}</h6>
+                <p class="card-text">{{item.tweet}}</p>
+              </div>
+            </div>
+      </div>
+    </div>
+    <div class="col-md-3 .u-boxShadow">
+as
+    </div>
+  </div>
+</div>

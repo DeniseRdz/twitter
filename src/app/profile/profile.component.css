@@ -1,23 +1,54 @@
 .u-boxShadow{
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
 }
-.Grid-cell {
+
+.placeholderImage {
+    border-radius: 50%;
+    height: 90px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 90px;
+}
+.ProfileNav-stat {
+    height: 60px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    display: inline-block;
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    vertical-align: top;
-    width: 100%;
+    border-bottom: 0 solid;
+        border-bottom-color: currentcolor;
+        border-bottom-width: 0px;
+    display: block;
+    line-height: 1;
+    padding: 14px 30% 7px;
+    transition: all .15s ease-in-out;
+
 }
-.placeholderImage {
-    -moz-force-broken-image-icon: 1;
-    border-radius: 50%;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+.ProfileNav-value{
+    
+    color: #66757f;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 3px;
+    transition: color .15s ease-in-out;
+}
+
+.EdgeButton--secondary {
+    background-color: #fff;
+    border: 1px solid #1da1f2;
+    color: #1da1f2;
+    min-width: 105px;
+    border-radius: 100px;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+.navbarbutton
+{
+    padding-left: 50%
 }
