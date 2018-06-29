@@ -1,23 +1,62 @@
-<div>
+<div class="bgColor">
   <div class="container">
     <div class="row marTop20">
-      <div class="col-3" style="background-color: aqua">
-        <div class="profileBanner">
-
+      <!-- LEFT SIDE TOP -->
+      <div class="col-3" style="background-color: white;">
+        <div>
+          <img class="profileBanner img-fluid" src="/assets/images/banner.jpg" alt="banner">
         </div>
-        <div class="profilePicture">
+        <div class="row">
+          <div class="col-5">
+            <img class="profilePicture" src="/assets/images/profile.png" alt="img">
+          </div>
+          <div class="col-7">
+            <p class="noBotMargin" style="margin-top: 10px;">Oscar Recio</p>
+            <p>@oscarrecio16</p>
+          </div>
+        </div>
+        <div>
 
         </div>
         <div class="botNumbers">
-
+          <div class="row">
+            <div class="col-4">
+              <p class="noBotMargin">Tweets</p>
+              <p class="numbersBot">120</p>
+            </div>
+            <div class="col-4">
+              <p class="noBotMargin">Following</p>
+              <p class="numbersBot">200</p>
+            </div>
+            <div class="col-4">
+              <p class="noBotMargin">Followers</p>
+              <p class="numbersBot">150</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-6" style="background-color: tomato">
-        b
+      <!-- CENTER -->
+      <div id="center" class="col-6">
+        <img class="profilePictureMin" src="/assets/images/profile.png" alt="img" style="margin-top: 15px;">
+        <input type="text" class="form-control" placeholder="What's happening?">
+          <app-tweet *ngFor="let item of twetsAll"></app-tweet>
       </div>
-      <div class="col-3" style="background-color: purple">
-        c
+      <!-- RIGHT SIDE TOP -->
+      <div class="col-3" style="background-color: lightpink">
+        
       </div>
     </div>
   </div>
 </div>
+
+
+
+<ul>
+  <li *ngFor="let item of userAll">{{item.name}}</li>
+</ul>
+
+<hr>
+
+<ul>
+  <li *ngFor="let item of twetsAll">{{item.tweet}}</li>
+</ul>
