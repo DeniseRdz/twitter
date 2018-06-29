@@ -1,0 +1,31 @@
+#center{
+    background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.bgColor{
+    background-color: #e6ecf0;
+}
+bgWhite{
+    background-color: white;
+}
+.profileBanner{
+    height: 80px;
+    width: 100%;
+}
+.profilePicture{
+    width: 80px;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+.profilePictureMin{
+    width: 40px;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+.numbersBot{
+    font-weight: bold;
+}
+.noBotMargin{
+    margin-bottom: 0px;
+}
