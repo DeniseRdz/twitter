@@ -21,7 +21,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 //#endregion
 
 const appRoutes: Routes = [
-  {path: '', component: LoginComponent},
+  // {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
 ];
