@@ -10,6 +10,8 @@ export class TwetsService {
   //#region  const
    dataTableTweets = "tweets";
    slash = "/"
+
+
   //#endregion
 
   constructor(public angularFireDatabase : AngularFireDatabase) {   }
@@ -19,7 +21,10 @@ export class TwetsService {
   }
 
   getTwetsByUserId(){
-    return this.angularFireDatabase.list(this.dataTableTweets);
+     
+    return  this.angularFireDatabase.list(this.dataTableTweets);
+
+ 
   }
 
 
