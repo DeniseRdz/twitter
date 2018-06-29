@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationsService } from '../authentications.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-reset-password',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResetPasswordComponent implements OnInit {
 
-  constructor() { }
+  inputEmail : string;
+
+  constructor(public authenticationService : AuthenticationsService, public router : Router ) { }
 
   ngOnInit() {
   }
+
+  resetPassword(){
+    console.log(this.inputEmail);
+    const promise = this.authenticationService.resetPassword(this.inputEmail);
+    promise.then((data) =>{
+      alert("SE ENVIO CORREO !");
+      console.log(data);
+      this.router.navigateByUrl("/login");
+    }).catch((error)=>{
+      alert("Valio Riel");
+      console.log(error);
+    });
+  }
+  
 
 }
