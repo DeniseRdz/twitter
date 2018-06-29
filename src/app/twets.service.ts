@@ -17,7 +17,7 @@ export class TwetsService {
    getAllTwets(){
     return this.angularFireDatabase.list(this.dataTableTweets);
   }
-  
+
   getTwetsByUserId(){
     return this.angularFireDatabase.list(this.dataTableTweets);
   }
