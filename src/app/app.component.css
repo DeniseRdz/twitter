@@ -11,10 +11,10 @@
 .colorLightGray{
     color: lightgray;
 }
-.bgBlack{
-    background-color: black;
-   
+.borderRad{   
     border-radius: 50%;
+    width: 35px;
+    height: 35px;
 }
 
 .bgWhite{
@@ -22,7 +22,7 @@
 }
 
 .fontSize{
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .colorBlue{
@@ -33,3 +33,8 @@
     color: #32adad;
 }
 
+.cursorStyle:hover{
+    cursor: pointer;
+    color: #32adad;
+    border-bottom: 1px solid #32adad;
+}

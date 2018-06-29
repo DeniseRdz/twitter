@@ -8,7 +8,6 @@ import { TwetsService } from '../twets.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   userAll = [];
   twetsAll = [];
 
