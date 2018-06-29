@@ -1,0 +1,35 @@
+.buttonRad {
+    
+    border-radius: 25px;
+}
+
+
+.textWhite{
+    color: white;
+}
+
+.colorLightGray{
+    color: lightgray;
+}
+.bgBlack{
+    background-color: black;
+   
+    border-radius: 50%;
+}
+
+.bgWhite{
+    background-color: white;
+}
+
+.fontSize{
+    font-size: 12px;
+}
+
+.colorBlue{
+    color: #0000ff;
+}
+
+.colorGreen{
+    color: #32adad;
+}
+
