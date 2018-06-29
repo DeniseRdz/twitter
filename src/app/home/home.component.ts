@@ -9,19 +9,19 @@ import { TwetsService } from '../twets.service';
 })
 export class HomeComponent implements OnInit {  
 
-  userAll =[];
+  userAll = [];
   twetsAll = [];
 
-  constructor(public usersService:UsersService, public twetsService : TwetsService) {
+  constructor(public usersService: UsersService, public twetsService: TwetsService) {
 
     const preview = this.usersService.getAllUsers();
-    preview.valueChanges().subscribe((user)=>{
-        this.userAll=user;
+    preview.valueChanges().subscribe((user) => {
+        this.userAll = user;
     });
-    
+
     const previewTwets = this.twetsService.getAllTwets();
-    previewTwets.valueChanges().subscribe((twet)=>{
-        this.twetsAll=twet;
+    previewTwets.valueChanges().subscribe((twet) => {
+        this.twetsAll = twet;
     });
     console.log(this.twetsAll);
 

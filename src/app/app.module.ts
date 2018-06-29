@@ -17,6 +17,9 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { ProfileComponent } from './profile/profile.component';
+import { Profile } from '../../node_modules/@types/selenium-webdriver/firefox';
+import { TweetComponent } from './tweet/tweet.component';
 
 //#endregion
 
@@ -24,13 +27,16 @@ const appRoutes: Routes = [
   // {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'profile', component: ProfileComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileComponent,
+    TweetComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,7 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule ,// imports firebase/storage only needed for storage features
+    AngularFireStorageModule , // imports firebase/storage only needed for storage features
     AngularFireDatabaseModule
   ],
   providers: [],
