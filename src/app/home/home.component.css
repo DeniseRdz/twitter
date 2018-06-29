@@ -23,6 +23,13 @@ bgWhite{
     border: 2px solid white;
     border-radius: 50px;
 }
+.trends{
+    color: #1da1f2;
+}
+.trends > p{
+    font-size: 0.7em;
+    color: gray;
+}
 .numbersBot{
     font-weight: bold;
 }
