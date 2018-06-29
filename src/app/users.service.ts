@@ -23,4 +23,13 @@ export class UsersService {
     
   }
 
+  
+  createUser(user){
+    return this.angularFireDatabase.object(this.dataTableUsers+this.slash+user.userId).set(user);
+  }
+
+  updateUser(user){
+    return this.angularFireDatabase.object(this.dataTableUsers+this.slash+user.userId).update(user);
+  }
+
 }

@@ -1,3 +1,27 @@
-<p>
-  register works!
-</p>
+
+
+<div class="container">
+  <div class="card card-container">
+      <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+     <!-- <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+      <p id="profile-name" class="profile-name-card"></p> -->
+          <p>Si ya tienes cuenta <a routerLink="/login">ingresa aquí</a></p>
+          <span id="reauth-email" class="reauth-email"></span>
+
+          <input  [(ngModel)]="name" type="text"  placeholder="Nombre" required autofocus style="margin: 5px;">
+          <input  [(ngModel)]="emailUser" type="email"  placeholder="Email" required autofocus style="margin: 5px;">
+          <input  [(ngModel)]="passUser" type="password" placeholder="Contraseña" required style="margin: 5px;">
+          <input  [(ngModel)]="repeatPassUser" type="password" placeholder="Repetir Contraseña" required style="margin: 5px; margin-bottom: 20px">
+         
+          <!-- <div id="remember" class="checkbox">
+              <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+              </label>
+          </div> -->
+          <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" (click)="register()">Registrar</button>
+   
+     <!-- <a href="#" class="forgot-password">
+          Forgot the password?
+      </a> -->
+  </div><!-- /card-container -->
+</div><!-- /container -->

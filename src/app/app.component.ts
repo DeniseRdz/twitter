@@ -15,7 +15,7 @@ export class AppComponent {
 
   suscribeCheck;
 
-  constructor(public router :Router, public autenticationService : AuthenticationsService){
+  constructor(public router : Router, public autenticationService : AuthenticationsService){
 
     const promise = this.autenticationService.getStatus();
 
@@ -23,10 +23,10 @@ export class AppComponent {
       this.suscribeCheck =suscribe;
         if(suscribe == null){
 
-          this.router.navigateByUrl("/login");
+        //  this.router.navigateByUrl("/login");
          
         }
-        localStorage.setItem("Suscribe", suscribe.uid);
+        // localStorage.setItem("Suscribe", suscribe.uid);
     });
 
   }
