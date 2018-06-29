@@ -15,25 +15,25 @@ export class AppComponent {
 
   suscribeCheck;
 
-  constructor(public router :Router, public autenticationService : AuthenticationsService){
+  constructor(public router: Router, public autenticationService: AuthenticationsService) {
 
     const promise = this.autenticationService.getStatus();
 
-    promise.subscribe((suscribe)=>{
-      this.suscribeCheck =suscribe;
-        if(suscribe == null){
+    promise.subscribe((suscribe) => {
+      this.suscribeCheck = suscribe;
+        if (suscribe == null) {
 
-          this.router.navigateByUrl("/login");
-         
+          // this.router.navigateByUrl("/login");
+
         }
-        localStorage.setItem("Suscribe", suscribe.uid);
+        // localStorage.setItem("Suscribe", suscribe.uid);
     });
 
   }
 
-  logOut(){
+  logOut() {
     this.autenticationService.logOut();
-    this.router.navigateByUrl("/login");
+    this.router.navigateByUrl('/login');
   }
 
 
