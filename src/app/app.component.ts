@@ -19,9 +19,11 @@ export class AppComponent {
 
     const promise = this.autenticationService.getStatus();
 
-    promise.subscribe((suscribe)=>{
-      this.suscribeCheck =suscribe;
-        if(suscribe == null){
+    promise.subscribe((suscribe) => {
+      this.suscribeCheck = suscribe;
+        if (suscribe == null) {
+
+          // this.router.navigateByUrl("/login");
 
         //  this.router.navigateByUrl("/login");
          
@@ -31,9 +33,9 @@ export class AppComponent {
 
   }
 
-  logOut(){
+  logOut() {
     this.autenticationService.logOut();
-    this.router.navigateByUrl("/login");
+    this.router.navigateByUrl('/login');
   }
 
 

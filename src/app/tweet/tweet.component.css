@@ -1,4 +1,4 @@
-body{
+/*body{
 	margin:0;
 	color:#444;
 	background:#444;
@@ -216,4 +216,30 @@ body{
 	opacity:1;
 	-webkit-transform:translateY(0);
 	        transform:translateY(0);
+}*/
+
+.icon{
+	color: gray;
+	margin: 0 20px;
+}
+.img-profile{
+	border-radius: 30px;
+}
+
+.icon1:hover{
+	color: blue;
+}
+.icon2:hover{
+	color: green;
+}
+.icon3:hover{
+	color: red;
+}
+.card{
+	width: 39.5vw;
+	margin: 20px 0;
+}
+
+.card:hover{
+	background-color: rgb(242, 251, 255);
 }
