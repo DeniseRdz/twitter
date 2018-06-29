@@ -1,0 +1,79 @@
+.txt-log{
+    /*margin: 50px 10px;*/
+}
+
+.container-fluid{
+    margin: 0px;
+    padding: 0px;
+}
+
+.btn-inicio{
+    border: 1px solid #1da1f2;
+    border-radius: 20px;
+    background-color: white;
+    color: #1da1f2;
+
+}
+
+.btn-registro{
+    border: 1px solid #1da1f2;
+    border-radius: 20px;
+    background-color: #1da1f2;
+    color: white;
+    margin: 20px 0;
+
+}
+
+.btn-inicio:hover{
+    background-color: #dee9f0;
+}
+
+.btn-registro:hover{
+    background-color: #126599;
+    
+}
+
+.icon-inicio{
+    font-size: 40px;
+    color: #1da1f2;
+    /*margin: auto;*/
+}
+
+
+.center{
+    text-align: center;
+    align-items: center;
+}
+.row{
+    margin: 5vh 0px;
+}
+
+.bg-blue{
+    background-color: #1da1f2;
+    padding: 15% 0px;
+}
+
+.icon-bg{
+    font-size: 70vw;
+    color: #12659933;
+    position: absolute;
+    z-index: 2;
+    left: 10%;
+    top: -30%;
+}
+
+.txt-login{
+    color: white;
+}
+
+.content{
+    position: relative;
+    overflow: hidden;
+    width: 95%;
+    height: 95%;
+    padding: 0px;
+    margin: 0px;
+}
+.index-1{
+    z-index: 3;
+}
