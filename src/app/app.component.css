@@ -2,6 +2,9 @@
     
     border-radius: 25px;
 }
+.dropdown-toggle::after {
+    display:none;
+}
 
 .right{
     float: right;
