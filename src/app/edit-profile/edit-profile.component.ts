@@ -42,10 +42,10 @@ export class EditProfileComponent implements OnInit {
 
   updateUser()
   {
-    var el : any  = document.getElementById('img-upload');
+   var el : any  = document.getElementById('img-upload');
 
       var objectUser = {
-        avatar: el.src  , name: this.userNick, lastName: this.userSubNick, userId :  this.userId, username:  this.UserName
+        avatar: el.src , name: this.userNick, lastName: this.userSubNick, userId :  this.userId, username:  this.UserName
       };
 
       const preview = this.userService.updateUser(objectUser);
@@ -58,5 +58,10 @@ export class EditProfileComponent implements OnInit {
 
 
   }
+
+
+
+  
+
 
 }
