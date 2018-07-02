@@ -12,6 +12,7 @@ export class TweetComponent implements OnInit {
 
   constructor(public twetsService: TwetsService) {
     this.getAll();
+
    }
 
   ngOnInit() {
@@ -23,5 +24,4 @@ export class TweetComponent implements OnInit {
       this.allTweets = result;
     });
   }
-
 }
