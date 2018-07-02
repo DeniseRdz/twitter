@@ -11,7 +11,7 @@
 }
 
 .colorGreen2{
-    color: #3ab0b0;
+    color: #1da1f2;
 }
 
 .noBorder{
@@ -29,8 +29,8 @@ border: 0px;
 
 .sizeTo32{
     border-radius: 50%;
-    width: 22px;
-    height: 32px;
+    width: 52px;
+    height: 52px;
 }
 
 .textWhite{
@@ -62,8 +62,38 @@ border: 0px;
     color: #32adad;
 }
 
+.cursorStyle{
+color: gray;
+margin: 0 20px;
+}
+
 .cursorStyle:hover{
     cursor: pointer;
-    color: #32adad;
-    border-bottom: 1px solid #32adad;
+    color: #1da1f2;
+    border-bottom: 1px solid #1da1f2;
+}
+
+#basic-addon1{
+    border-radius: 0px 30px 30px 0px;
+}
+
+.btn-blue{
+    background-color:#1da1f2;
+    padding: 10px 40px;
+    margin: 0 40px;
+}
+
+.btn-blue:hover{
+    background-color:#187ebd;
+}
+
+.btn-blue2{
+    padding: 10px 10px; 
+    display: inline; 
+    background-color: #1da1f2;
+    margin: 10px 0;
+}
+
+.btn-blue2:hover{
+    background-color:#187ebd;
 }

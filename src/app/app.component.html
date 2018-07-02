@@ -29,7 +29,7 @@
             <div class="col-6 input-group d-flex justify-content-start">
                 <input type="text" class="form-control buttonRad" placeholder="Buscar en Twitter" aria-label="Username" aria-describedby="basic-addon1">
                 <div class="input-group-prepend ">
-                    <i class=" input-group-text  fas fa-search bgWhite  " id="basic-addon1"></i>
+                    <i class=" input-group-text  fas fa-search bgWhite " id="basic-addon1"></i>
                 </div>
             </div>
             
@@ -83,7 +83,7 @@
                       <button class="dropdown-item" (click)="logOut()" style="cursor: pointer;">LogOut</button>
                     </div>
                   </div> -->
-            <button class="col-2 d-flex justify-content-center btn btn-success buttonRad textWhite fontSize"(click)="open(content)" type="submit">Twittear</button>
+            <button class="col-2 d-flex justify-content-center btn btn-blue buttonRad textWhite fontSize"(click)="open(content)" type="submit">Twittear</button>
     </div></div>
 </div>
     <!-- </div> -->
@@ -108,7 +108,7 @@
                 <div class="form-control">
                     <div class="row">
                             <div class="col-1"></div>
-                        <textarea class="noBorder col-9" placeholder="¿Qué está pasando?" ></textarea>
+                        <textarea name="name1" [(ngModel)]="tweetText" class="noBorder col-9" placeholder="¿Qué está pasando?" ></textarea>
                         <div class="col-1"><i class="far fa-smile right"></i></div>
                     </div>
                     <!-- <textarea rows="3" > </textarea> -->
@@ -132,7 +132,11 @@
                     <button class="btn colorGreen2 bgTextBox"><i class="fas btn fa-plus colorGreen2"></i>
                     </button>
                     
-                    <button class="btn btn-success buttonRad textWhite fontSize" type="submit">Twittear</button>
+<<<<<<< HEAD
+                    <button class="btn btn-blue2 buttonRad textWhite fontSize" type="submit" style="padding: 10px 10px; display: inline; background-color: #1da1f2">Twittear</button>
+=======
+                    <button (click)="tweet()"class="btn btn-success buttonRad textWhite fontSize" type="submit">Twittear</button>
+>>>>>>> 4135128ec3d238a02014bedab591a697c13c5492
                     
 
                 </div>
