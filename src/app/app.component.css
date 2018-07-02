@@ -3,6 +3,32 @@
     border-radius: 25px;
 }
 
+.right{
+    float: right;
+}
+
+.colorGreen2{
+    color: #3ab0b0;
+}
+
+.noBorder{
+border: 0px;
+}
+
+
+.colorLightGray{
+    color: lightgray;
+}
+
+.bgTextBox{
+    background-color: #e5f5f5;
+}
+
+.sizeTo32{
+    border-radius: 50%;
+    width: 22px;
+    height: 32px;
+}
 
 .textWhite{
     color: white;
