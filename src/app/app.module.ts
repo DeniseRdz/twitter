@@ -28,7 +28,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 //#endregion
 
 const appRoutes: Routes = [
-  {path: '', component: LoginComponent},
+  {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
   {path: 'profile', component: ProfileComponent},

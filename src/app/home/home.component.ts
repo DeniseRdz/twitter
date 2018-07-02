@@ -10,6 +10,7 @@ import { TwetsService } from '../twets.service';
 export class HomeComponent implements OnInit {
   userAll = [];
   twetsAll = [];
+  textFieldTweet: string;
 
   constructor(public usersService: UsersService, public twetsService: TwetsService) {
 
@@ -30,6 +31,7 @@ export class HomeComponent implements OnInit {
   }
   tweet() {
     // Metodo para twitear
+    this.textFieldTweet = '';
   }
 
 }
