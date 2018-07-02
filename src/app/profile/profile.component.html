@@ -125,8 +125,9 @@
     <div class="row">
       <dir class="col-1"></dir>
         <div class="col-3">
-          <h3>Nombre Usuario</h3>
-          <small>@twitter</small>
+          <h3 *ngIf="userInfo">{{userInfo.name}}</h3>
+          <small *ngIf="userInfo">@{{userInfo.username}}</small>
+          <p *ngIf="userInfo">{{userInfo.email}}</p>
           <p><i class="fas fa-map-marker-alt"></i> Locación</p>
           <p><i class="far fa-calendar-alt"></i> Se unio</p>
           <p><i class="fas fa-gift"></i> Cumpleaños</p>

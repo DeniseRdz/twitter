@@ -19,7 +19,6 @@ export class ProfileComponent implements OnInit {
     this.getAllUsers();
    }
    getUserInfo() {
-     console.log(this.userId);
     const userInfo = this.userService.getUserByUserId(this.userId);
     userInfo.valueChanges().subscribe((result) => {
       this.userInfo = result;
@@ -29,7 +28,7 @@ export class ProfileComponent implements OnInit {
 
   getTweets() {
     console.log(this.userId);
-
+    console.log('----');
     const previewTwets = this.twetsService.getTwetsByUserId(this.userId);
 
     console.log(previewTwets);
@@ -39,10 +38,9 @@ export class ProfileComponent implements OnInit {
     const usersInfo = this.userService.getAllUsers();
     usersInfo.valueChanges().subscribe((results) => {
       this.usersInfo = results;
-      console.log(this.usersInfo);
     });
   }
-ngOnInit() {
-}
+  ngOnInit() {
+  }
 }
 

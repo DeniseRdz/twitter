@@ -9,10 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class TweetComponent implements OnInit {
   allTweets: any;
   usersTweets: any;
+  array = [1, 2];
 
   constructor(public twetsService: TwetsService) {
     this.getAll();
-
    }
 
   ngOnInit() {
