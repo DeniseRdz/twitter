@@ -61,7 +61,7 @@
             <img class="profilePictureMin" src="/assets/images/profile.png" alt="img" style="margin-top: 15px;">
           </div>
           <div class="col-8" style="padding-left: 0; margin-top: 15px;">
-            <input type="text" class="form-control" maxlength="280" placeholder="What's happening?">
+            <input type="text" class="form-control" maxlength="280" placeholder="What's happening?" [(ngModel)]="textFieldTweet">
           </div>
           <div class="col-2" style="padding-left: 0;padding-top: 15px;">
               <button class="btn btn-primary" (click)="tweet()">Tweet</button>
