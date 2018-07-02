@@ -40,12 +40,36 @@
                       <button class="dropdown-item" (click)="logOut()">LogOut</button>
                     </div>
                   </div>
-            <button class="col-2 d-flex justify-content-center btn btn-success buttonRad textWhite fontSize" type="submit">Twittear</button>
+            <button class="col-2 d-flex justify-content-center btn btn-success buttonRad textWhite fontSize"(click)="open(content)" type="submit">Twittear</button>
     </div></div>
 </div>
     <!-- </div> -->
 </nav>
 
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+<!-- CONTENIDO MODAL -->
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="dateOfBirth">Date of birth</label>
+          <div class="input-group">
+            <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
+            
+          </div>
+        </div>
+      </form>
+    </div>
+<!-- FOOTER MODAL -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+    </div>
+  </ng-template>
 
 
 <router-outlet></router-outlet>

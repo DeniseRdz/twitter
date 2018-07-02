@@ -8,15 +8,15 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class TwetsService {
 
   //#region  const
-   dataTableTweets = "tweets";
-   slash = "/"
+   dataTableTweets = 'tweets';
+   slash = '/';
 
 
   //#endregion
 
-  constructor(public angularFireDatabase : AngularFireDatabase) {   }
+  constructor(public angularFireDatabase: AngularFireDatabase) {   }
 
-   getAllTwets(){
+   getAllTwets() {
     return this.angularFireDatabase.list(this.dataTableTweets);
   }
 
