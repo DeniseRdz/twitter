@@ -10,6 +10,7 @@ import { TwetsService } from '../twets.service';
 export class HomeComponent implements OnInit {
   userAll = [];
   twetsAll = [];
+  userTwets = [];
   textFieldTweet: string;
   dateString = '';
   userId: string;
@@ -30,12 +31,21 @@ export class HomeComponent implements OnInit {
     });
 
     const previewTwets = this.twetsService.getAllTwets();
-    previewTwets.valueChanges().subscribe((twet) => {
-        this.twetsAll = twet;
+    previewTwets.valueChanges().subscribe((twet:any) => {
+       
+      this.twetsAll = twet;
+
+  
     });
+
+
+   
 
     this.userId = localStorage.getItem('Suscribe');
    }
+
+
+
 
   ngOnInit() {
   }

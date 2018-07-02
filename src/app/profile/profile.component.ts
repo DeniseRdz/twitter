@@ -12,6 +12,9 @@ export class ProfileComponent implements OnInit {
   userId: string;
   userInfo;
   usersInfo;
+
+  userTwetsById = [];
+
   constructor( public twetsService: TwetsService , public userService: UsersService) {
     this.userId = localStorage.getItem('Suscribe');
     this.getTweets();
@@ -19,27 +22,26 @@ export class ProfileComponent implements OnInit {
     this.getAllUsers();
    }
    getUserInfo() {
-     console.log(this.userId);
+    // console.log(this.userId);
     const userInfo = this.userService.getUserByUserId(this.userId);
     userInfo.valueChanges().subscribe((result) => {
       this.userInfo = result;
-      console.log( this.userInfo);
+     // console.log( this.userInfo);
        });
    }
 
   getTweets() {
-    console.log(this.userId);
+    
+     this.userTwetsById = this.twetsService.getTwetsByUserId(this.userId);
 
-    const previewTwets = this.twetsService.getTwetsByUserId(this.userId);
-
-    console.log(previewTwets);
+    console.log(this.userTwetsById);
   }
 
   getAllUsers()  {
     const usersInfo = this.userService.getAllUsers();
     usersInfo.valueChanges().subscribe((results) => {
       this.usersInfo = results;
-      console.log(this.usersInfo);
+    //  console.log(this.usersInfo);
     });
   }
 ngOnInit() {
