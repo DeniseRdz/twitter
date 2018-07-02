@@ -10,12 +10,12 @@ import { UsersService } from '../users.service';
 export class TweetComponent implements OnInit {
   allTweets: any;
   usersTweets: any;
+  array = [1, 2];
 
   userTwets = [];
 
   constructor(public usersService: UsersService,public twetsService: TwetsService) {
     this.getAll();
-
    }
 
   ngOnInit() {

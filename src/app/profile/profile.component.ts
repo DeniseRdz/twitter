@@ -31,7 +31,7 @@ export class ProfileComponent implements OnInit {
    }
 
   getTweets() {
-    
+
      this.userTwetsById = this.twetsService.getTwetsByUserId(this.userId);
 
     console.log(this.userTwetsById);
@@ -44,7 +44,7 @@ export class ProfileComponent implements OnInit {
     //  console.log(this.usersInfo);
     });
   }
-ngOnInit() {
-}
+  ngOnInit() {
+  }
 }
 
