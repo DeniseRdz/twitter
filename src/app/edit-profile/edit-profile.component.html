@@ -2,7 +2,7 @@
 
     <div class="col-md-4 d-flex justify-content-center">
         <div style="margin-top: 50px;">
-        <img src="{{imageSrc}}" alt="image_Profile" class="imageProfile" id="img-upload" >
+       <!-- <img src="{{imageSrc}}" alt="image_Profile" class="imageProfile" id="img-upload" >
         
          <p>Cambiar Imagen</p>
           <div class="input-group">
@@ -12,7 +12,10 @@
                   </span>
               </span>
             
-          </div>
+          </div>  -->
+          
+          <input type='file' onchange="readURL(this);" />
+          <img id="blah" src="http://placehold.it/180" alt="your image" />
   
          </div>
     </div>

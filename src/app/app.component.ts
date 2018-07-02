@@ -19,9 +19,9 @@ export class AppComponent {
   closeResult: string;
   tweetText: string;
 
-  constructor(public homeComponent: HomeComponent, private modalService: NgbModal, public router: Router, public autenticationService: AuthenticationsService) {
+  constructor( private modalService: NgbModal, public router: Router, public autenticationService: AuthenticationsService) {
     this.userId=localStorage.getItem('Subscribe');
-    homeComponent.tweet(this.tweetText);
+  
     const promise = this.autenticationService.getStatus();
 
     promise.subscribe((suscribe) => {

@@ -11,7 +11,8 @@ export const environment = {
     projectId: "mitwitter2-0",
     storageBucket: "mitwitter2-0.appspot.com",
     messagingSenderId: "32860498332"
-  }
+  },
+  
 };
 
 /*
