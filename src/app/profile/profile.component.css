@@ -1,4 +1,4 @@
-.u-boxShadow{
+/*.u-boxShadow{
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
 }
 
@@ -51,4 +51,82 @@
 .navbarbutton
 {
     padding-left: 50%
+}*/
+
+.jumbotron{
+    background-image: url("/assets/images/banner.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 20% 0% 0% 0%;
+    margin-bottom: 0px;
+}
+ .img{
+    width: 200px;
+    height: 200px;
+    border-radius: 150px;
+    overflow: hidden;
+    margin-top: 10%;
+    margin-left: 10%;
+    position: relative;
+    top: -300px;
+    border: 5px solid white;
+ }
+
+ .img-profile{
+    position:absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.navs{
+    background-color: white;
+}
+
+ .btn{
+     border: 1px solid gray;
+     border-radius: 100px;
+     background-color: white;
+     color: gray;
+     margin-left: 300%;
+     margin-top: 15%;
+
+ }
+
+ .up-all{
+     margin: auto auto;
+     top: 450px;
+     position: absolute;
+ }
+
+ .img-follow{
+    width: 50px;
+    height: 50px;
+    border-radius: 150px;
+    overflow: hidden;
+    margin-top: 10%;
+    margin-left: 10%;
+    position: relative;
+    top: 00px;
+    display: inline-block;
+ }
+.img-g{
+    position:relative;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+}
+.card-body small{
+    position: relative;
+    margin: 10px;
+    top: -20px;
 }
