@@ -8,12 +8,13 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class TwetsService {
 
   //#region  const
-   dataTableTweets = "tweets";
-   slash = "/"
-   
-   list =[];
-   TweetsUser= [];
-  
+   dataTableTweets = 'tweets';
+   slash = '/';
+
+   list = [];
+   TweetsUser = [];
+   dateForTweetId = new Date();
+
 
   //#endregion
 
@@ -23,16 +24,16 @@ export class TwetsService {
     return this.angularFireDatabase.list(this.dataTableTweets);
   }
 
-  getTwetsByUserId(userId){
+  getTwetsByUserId(userId) {
 
-    const preview =   this.angularFireDatabase.list(this.dataTableTweets); 
+    const preview =   this.angularFireDatabase.list(this.dataTableTweets);
 
-    preview.valueChanges().subscribe((value)=>{
+    preview.valueChanges().subscribe((value) => {
         this.list = value;
     });
 
-    this.list.filter((value)=>{
-        if(value.userId == userId){
+    this.list.filter((value) => {
+        if (value.userId === userId) {
           this.TweetsUser.push(value);
         }
     });
@@ -41,9 +42,8 @@ export class TwetsService {
 
   }
 
-  createTwet(Twet){
-    return this.angularFireDatabase.object(this.dataTableTweets+this.slash+Twet.tweetId).set(Twet);
+  createTwet(Twet) {
+    return this.angularFireDatabase.object(this.dataTableTweets + this.slash + this.dateForTweetId.getTime()).set(Twet);
       }
 
     }
-    

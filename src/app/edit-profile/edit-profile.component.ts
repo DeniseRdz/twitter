@@ -11,28 +11,28 @@ import { UsersService } from '../users.service';
 
 export class EditProfileComponent implements OnInit {
 
-  userId : string;
+  userId: string;
   StatusAll = [];
   dataUser = {};
-  userNick : string;
-  userSubNick : string;
-  userEmail : string;
-  userStatus : string;
-  imageSrc:string;
-  UserName:string;
+  userNick: string;
+  userSubNick: string;
+  userEmail: string;
+  userStatus: string;
+  imageSrc: string;
+  UserName: string;
 
-  constructor(public userService : UsersService) {
+  constructor(public userService: UsersService) {
 
-    this.userId=localStorage.getItem("Suscribe");
+    this.userId = localStorage.getItem('Suscribe');
 
     const preview = this.userService.getUserByUserId(this.userId);
 
-    preview.valueChanges().subscribe((result :any)=>{
+    preview.valueChanges().subscribe((result: any) => {
       this.userNick = result.name;
       this.userSubNick = result.lastName;
       this.userEmail = result.email;
-      this.imageSrc= result.avatar;
-      this.UserName= result.username;
+      this.imageSrc = result.avatar;
+      this.UserName = result.username;
     });
 
    }
@@ -42,21 +42,27 @@ export class EditProfileComponent implements OnInit {
 
   updateUser()
   {
-    var el : any  = document.getElementById('img-upload');
+   var el : any  = document.getElementById('img-upload');
 
       var objectUser = {
-        avatar: el.src  , name: this.userNick, lastName: this.userSubNick, userId :  this.userId, username:  this.UserName
+        avatar: el.src , name: this.userNick, lastName: this.userSubNick, userId :  this.userId, username:  this.UserName
+ 
       };
 
       const preview = this.userService.updateUser(objectUser);
-      preview.then(() =>{
-        alert("Usuario Actualizado con  Exito!");
-      }).catch( (error) =>{
-        alert("hubo pedo!");
+      preview.then(() => {
+        alert('Usuario Actualizado con  Exito!');
+      }).catch( (error) => {
+        alert('hubo pedo!');
         console.log(error);
       });
 
 
   }
+
+
+
+  
+
 
 }

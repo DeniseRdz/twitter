@@ -1,3 +1,4 @@
+import { TwetsService } from './../twets.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tweet.component.css']
 })
 export class TweetComponent implements OnInit {
+  allTweets: any;
+  usersTweets: any;
 
-  constructor() { }
+  constructor(public twetsService: TwetsService) {
+    this.getAll();
+
+   }
 
   ngOnInit() {
   }
 
+  getAll() {
+    const stream = this.twetsService.getAllTwets();
+    stream.valueChanges().subscribe( (result) => {
+      this.allTweets = result;
+    });
+  }
 }
