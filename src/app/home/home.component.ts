@@ -10,17 +10,10 @@ import { TwetsService } from '../twets.service';
 export class HomeComponent implements OnInit {
   userAll = [];
   twetsAll = [];
+  userTwets = [];
   textFieldTweet: string;
   dateString = '';
   userId: string;
-
-  tweetObj = {
-    date: '',
-    hour: '',
-    tweet: '',
-    userId: '',
-    userName: '',
-  };
 
   constructor(public usersService: UsersService, public twetsService: TwetsService) {
 
@@ -30,29 +23,47 @@ export class HomeComponent implements OnInit {
     });
 
     const previewTwets = this.twetsService.getAllTwets();
-    previewTwets.valueChanges().subscribe((twet) => {
-        this.twetsAll = twet;
-    });
+    previewTwets.valueChanges().subscribe((twet: any) => {
 
+      this.twetsAll = twet;
+
+  
+    });
     this.userId = localStorage.getItem('Suscribe');
    }
 
+
+
+
   ngOnInit() {
   }
-  tweet() { // "06/29/2018"
+  tweet(tweetString?: string) {
+    const tweetObj = {
+      date: '',
+      hour: '',
+      tweet: '',
+      userId: '',
+      userName: '',
+    };
     const date = new Date();
     this.dateString = date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear();
 
     // LLENADO OBJETO
-    this.tweetObj.date = this.dateString;
-    this.tweetObj.hour = '' + date.getHours() + ':' + date.getMinutes();
-    this.tweetObj.tweet = this.textFieldTweet;
-    this.tweetObj.userId = this.userId;
+    tweetObj.date = this.dateString;
+    tweetObj.hour = '' + date.getHours() + ':' + date.getMinutes();
+    if (tweetString === undefined) {
+      tweetObj.tweet = this.textFieldTweet;
+    } else {
+      tweetObj.tweet = tweetString;
+    }
+
     const streamUser = this.usersService.getUserByUserId(this.userId);
     streamUser.valueChanges().subscribe((result) => {
+
+      tweetObj.userId = this.userId;
       const obj: any = result;
-      this.tweetObj.userName = obj.name;
-      this.twetsService.createTwet(this.tweetObj);
+      tweetObj.userName = obj.name;
+      this.twetsService.createTwet(tweetObj);
     });
   }
 

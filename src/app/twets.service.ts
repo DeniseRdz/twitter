@@ -11,7 +11,7 @@ export class TwetsService {
    dataTableTweets = 'tweets';
    slash = '/';
 
-   list = [];
+   list : any;
    TweetsUser = [];
    dateForTweetId = new Date();
 
@@ -26,19 +26,15 @@ export class TwetsService {
 
   getTwetsByUserId(userId) {
 
-    const preview =   this.angularFireDatabase.list(this.dataTableTweets);
 
-    preview.valueChanges().subscribe((value) => {
-        this.list = value;
-    });
 
-    this.list.filter((value) => {
-        if (value.userId === userId) {
-          this.TweetsUser.push(value);
-        }
-    });
 
-     return  this.TweetsUser;
+     this.angularFireDatabase.database.ref(this.dataTableTweets)
+     .orderByChild("userId").equalTo(userId).on("child_added", (user) =>{
+       this.TweetsUser.push(user.val());
+     });
+ 
+     return this.TweetsUser;
 
   }
 

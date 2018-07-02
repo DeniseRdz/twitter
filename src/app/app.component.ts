@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { Component } from '@angular/core';
 //#region import Router - AuthenticationService
 import { Router } from '@angular/router';
@@ -13,12 +14,14 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class AppComponent {
   title = 'app';
-
+  userId:string;
   suscribeCheck;
   closeResult: string;
+  tweetText: string;
 
-  constructor(private modalService: NgbModal, public router: Router, public autenticationService: AuthenticationsService) {
-
+  constructor(public homeComponent: HomeComponent, private modalService: NgbModal, public router: Router, public autenticationService: AuthenticationsService) {
+    this.userId=localStorage.getItem('Subscribe');
+    homeComponent.tweet(this.tweetText);
     const promise = this.autenticationService.getStatus();
 
     promise.subscribe((suscribe) => {

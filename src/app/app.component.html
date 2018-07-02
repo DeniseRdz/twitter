@@ -79,8 +79,8 @@
             <!-- <div ngbDropdown class="d-inline-block">
                     <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>X</button>
                     <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                      <button class="dropdown-item" routerLink="/editProfile">Editar</button>
-                      <button class="dropdown-item" (click)="logOut()">LogOut</button>
+                      <button class="dropdown-item" routerLink="/editProfile" style="cursor: pointer;">Editar</button>
+                      <button class="dropdown-item" (click)="logOut()" style="cursor: pointer;">LogOut</button>
                     </div>
                   </div> -->
             <button class="col-2 d-flex justify-content-center btn btn-blue buttonRad textWhite fontSize"(click)="open(content)" type="submit">Twittear</button>
@@ -108,7 +108,7 @@
                 <div class="form-control">
                     <div class="row">
                             <div class="col-1"></div>
-                        <textarea class="noBorder col-9" placeholder="¿Qué está pasando?" ></textarea>
+                        <textarea name="name1" [(ngModel)]="tweetText" class="noBorder col-9" placeholder="¿Qué está pasando?" ></textarea>
                         <div class="col-1"><i class="far fa-smile right"></i></div>
                     </div>
                     <!-- <textarea rows="3" > </textarea> -->
@@ -132,7 +132,11 @@
                     <button class="btn colorGreen2 bgTextBox"><i class="fas btn fa-plus colorGreen2"></i>
                     </button>
                     
+<<<<<<< HEAD
                     <button class="btn btn-blue2 buttonRad textWhite fontSize" type="submit" style="padding: 10px 10px; display: inline; background-color: #1da1f2">Twittear</button>
+=======
+                    <button (click)="tweet()"class="btn btn-success buttonRad textWhite fontSize" type="submit">Twittear</button>
+>>>>>>> 4135128ec3d238a02014bedab591a697c13c5492
                     
 
                 </div>
