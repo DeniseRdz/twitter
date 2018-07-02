@@ -28,7 +28,7 @@ export class ProfileComponent implements OnInit {
    }
   getTweets() {
     console.log(this.userId);
-    const previewTwets = this.twetsService.getTwetsByUserId();
+    const previewTwets = this.twetsService.getTwetsByUserId(this.userId);
     previewTwets.valueChanges().subscribe((twet) => {
         this.userTweets = twet;
         console.log(this.userTweets);
