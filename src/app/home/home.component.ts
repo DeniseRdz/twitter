@@ -24,47 +24,15 @@ export class HomeComponent implements OnInit {
 
     const previewTwets = this.twetsService.getAllTwets();
     previewTwets.valueChanges().subscribe((twet: any) => {
-
       this.twetsAll = twet;
-
-  
     });
     this.userId = localStorage.getItem('Suscribe');
    }
-
-
-
-
   ngOnInit() {
   }
-  tweet(tweetString?: string) {
-    const tweetObj = {
-      date: '',
-      hour: '',
-      tweet: '',
-      userId: '',
-      userName: '',
-    };
-    const date = new Date();
-    this.dateString = date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear();
 
-    // LLENADO OBJETO
-    tweetObj.date = this.dateString;
-    tweetObj.hour = '' + date.getHours() + ':' + date.getMinutes();
-    if (tweetString === undefined) {
-      tweetObj.tweet = this.textFieldTweet;
-    } else {
-      tweetObj.tweet = tweetString;
-    }
-
-    const streamUser = this.usersService.getUserByUserId(this.userId);
-    streamUser.valueChanges().subscribe((result) => {
-
-      tweetObj.userId = this.userId;
-      const obj: any = result;
-      tweetObj.userName = obj.name;
-      this.twetsService.createTwet(tweetObj);
-    });
+  tweet() {
+    this.twetsService.tweet(this.textFieldTweet);
   }
 
 }

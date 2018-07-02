@@ -54,6 +54,7 @@ export class AppComponent {
 
   logOut() {
     this.autenticationService.logOut();
+    localStorage.removeItem('Suscribe');
     this.router.navigateByUrl('/login');
   }
 
