@@ -1,9 +1,11 @@
+import { TwetsService } from './twets.service';
 import { HomeComponent } from './home/home.component';
 import { Component } from '@angular/core';
 //#region import Router - AuthenticationService
 import { Router } from '@angular/router';
 import { AuthenticationsService } from './authentications.service';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+
 //#endregion
 
 
@@ -19,8 +21,9 @@ export class AppComponent {
   closeResult: string;
   tweetText: string;
 
-  constructor(private modalService: NgbModal, public router: Router, public autenticationService: AuthenticationsService) {
-    this.userId = localStorage.getItem('Subscribe');
+  constructor(public twetsService: TwetsService, private modalService: NgbModal, public router: Router, public autenticationService: AuthenticationsService) {
+    // this.userId=localStorage.getItem('Subscribe');
+    // HomeComponent.tweet(this.tweetText);
     const promise = this.autenticationService.getStatus();
 
     promise.subscribe((suscribe) => {
@@ -49,6 +52,12 @@ export class AppComponent {
     } else {
       return  `with: ${reason}`;
     }
+  }
+
+  tweet(){
+    this.twetsService.tweet(this.tweetText);
+    this.tweetText = '';
+    // this.router.navigateByUrl('/#');
   }
 
   logOut() {
