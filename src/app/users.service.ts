@@ -5,6 +5,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 @Injectable({
   providedIn: 'root'
 })
+
 export class UsersService {
 
     //#region  const
@@ -23,7 +24,6 @@ export class UsersService {
     
   }
 
-  
   createUser(user){
     return this.angularFireDatabase.object(this.dataTableUsers+this.slash+user.userId).set(user);
   }

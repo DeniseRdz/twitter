@@ -22,16 +22,17 @@ export class ProfileComponent implements OnInit {
     userInfo.valueChanges().subscribe((result) => {
       this.userInfo = result;
       console.log( this.userInfo);
-  });
+       });
    }
+
   getTweets() {
     console.log(this.userId);
+
     const previewTwets = this.twetsService.getTwetsByUserId(this.userId);
-    previewTwets.valueChanges().subscribe((twet) => {
-        this.userTweets = twet;
-        console.log(this.userTweets);
-    });
+
+    console.log(previewTwets);
   }
+
 ngOnInit() {
 }
 }

@@ -10,8 +10,9 @@ export class TwetsService {
   //#region  const
    dataTableTweets = "tweets";
    slash = "/"
-
-
+   
+   list =[];
+   TweetsUser= [];
   //#endregion
 
   constructor(public angularFireDatabase : AngularFireDatabase) {   }
@@ -20,16 +21,26 @@ export class TwetsService {
     return this.angularFireDatabase.list(this.dataTableTweets);
   }
 
-<<<<<<< HEAD
-  getTwetsByUserId(usrID) {
-    return this.angularFireDatabase.list(this.dataTableTweets);
-=======
-  getTwetsByUserId(){
-     
-    return  this.angularFireDatabase.list(this.dataTableTweets);
+  getTwetsByUserId(userId){
 
- 
->>>>>>> 2817c5382c548801f88416cffd7e2b116b46401f
+    const preview =   this.angularFireDatabase.list(this.dataTableTweets); 
+
+    preview.valueChanges().subscribe((value)=>{
+        this.list = value;
+    });
+
+    this.list.filter((value)=>{
+        if(value.userId == userId){
+          this.TweetsUser.push(value);
+        }
+    });
+
+     return  this.TweetsUser;
+
+  }
+
+  createTwet(Twet){
+    return this.angularFireDatabase.object(this.dataTableTweets+this.slash+Twet.tweetId).set(Twet);
   }
 
 
