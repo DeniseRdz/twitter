@@ -1,23 +1,21 @@
 <div class="row" *ngIf="userNick">
 
-  <div class="col-md-4 d-flex justify-content-center">
-      <div style="margin-top: 50px;">
-      <img src="{{imageSrc}}" alt="image_Profile" class="imageProfile" id="img-upload" >
+    <div class="col-md-4 d-flex justify-content-center">
+        <div style="margin-top: 50px;">
+        <img src="{{imageSrc}}" alt="image_Profile" class="imageProfile" id="img-upload" >
+        
+         <p>Cambiar Imagen</p>
+          <div class="input-group">
+              <span class="input-group-btn">
+                  <span class="btn btn-default btn-file">
+                       <input type="file" id="imgInp">
+                  </span>
+              </span>
             
-       
-
-       <p>Cambiar Imagen</p>
-        <div class="input-group">
-            <span class="input-group-btn">
-                <span class="btn btn-default btn-file">
-                     <input type="file" id="imgInp">
-                </span>
-            </span>
-          
-        </div>
-
-       </div>
-  </div>
+          </div>
+  
+         </div>
+    </div>
 
   <div class="col-md-8 d-flex justify-content-start">
 
@@ -58,3 +56,6 @@
   </div>
 
 </div>
+
+
+

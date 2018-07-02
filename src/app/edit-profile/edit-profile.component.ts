@@ -40,11 +40,13 @@ export class EditProfileComponent implements OnInit {
   ngOnInit() {
   }
 
-  updateUser() {
-    const el: any  = document.getElementById('img-upload');
+  updateUser()
+  {
+   var el : any  = document.getElementById('img-upload');
 
-      const objectUser = {
-        avatar: el.src  , name: this.userNick, lastName: this.userSubNick, userId :  this.userId, username:  this.UserName
+      var objectUser = {
+        avatar: el.src , name: this.userNick, lastName: this.userSubNick, userId :  this.userId, username:  this.UserName
+ 
       };
 
       const preview = this.userService.updateUser(objectUser);
@@ -57,5 +59,10 @@ export class EditProfileComponent implements OnInit {
 
 
   }
+
+
+
+  
+
 
 }
