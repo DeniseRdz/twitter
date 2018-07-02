@@ -32,14 +32,57 @@
                     <i class=" input-group-text  fas fa-search bgWhite  " id="basic-addon1"></i>
                 </div>
             </div>
-            <img class="col-2 d-flex justify-content-center borderRad" src="/assets/images/profile.png" alt="img" routerLink="/profile" style="cursor: pointer;">
-            <div ngbDropdown class="d-inline-block">
+            
+            <!-- <button ngbDropdown class="d-inline-block"> <img class="col-2 d-flex justify-content-center borderRad" src="/assets/images/profile.png" alt="img"> -->
+            
+                <div ngbDropdown class="d-inline-block">
+                        <button class="dropdown-toggle noBorder bg-light" id="dropdownBasic1" ngbDropdownToggle>
+                                <img class="borderRad" src="/assets/images/profile.png" alt="img">
+                        </button>
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                          <button class="dropdown-item" >Oscar Recio <br> @OscarRecio</button>
+                          <hr>
+                          <button class="dropdown-item" routerLink="/editProfile" >
+                                <i class="fas fa-user"></i>
+                            Perfil
+                          </button>
+                          <button class="dropdown-item" >
+                                <i class="fas fa-list"></i>
+                            Listas</button>
+                          <button class="dropdown-item" >
+                                <i class="fas fa-bolt"></i>
+                            Momentos</button>
+                          <hr>
+                          <button class="dropdown-item" >
+                                <i class="fas fa-chart-line"></i>
+                            Twitter Adds</button>
+                          <button class="dropdown-item" >
+                                <i class="far fa-chart-bar"></i>
+                            Analytics</button>
+                          <hr>
+                          <button class="dropdown-item" >
+                              Configuración y privacidad</button>
+                          <button class="dropdown-item" >
+                              Centro de Ayuda</button>
+                          <button class="dropdown-item" >
+                              Atajos de teclado</button>
+                          <button class="dropdown-item" (click)="logOut()" >
+                              Cerrar Sesión</button>
+                          <hr>
+                          <button class="dropdown-item" >
+                            Modo Noche
+                            <i class="far fa-moon"></i>
+                            </button>
+                        </div>
+                      </div>
+            
+            <!-- <div ngbDropdown class="d-inline-block">
                     <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>X</button>
                     <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                       <button class="dropdown-item" routerLink="/editProfile" style="cursor: pointer;">Editar</button>
                       <button class="dropdown-item" (click)="logOut()" style="cursor: pointer;">LogOut</button>
                     </div>
-                  </div>
+                  </div> -->
             <button class="col-2 d-flex justify-content-center btn btn-success buttonRad textWhite fontSize"(click)="open(content)" type="submit">Twittear</button>
     </div></div>
 </div>

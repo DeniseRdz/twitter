@@ -100,7 +100,7 @@
 
  .up-all{
      margin: auto auto;
-     top: 450px;
+     top: 550px;
      position: absolute;
  }
 
@@ -129,4 +129,28 @@
     position: relative;
     margin: 10px;
     top: -20px;
+}
+
+
+
+.icon{
+	color: gray;
+	margin: 0 20px;
+}
+.img-profile{
+	border-radius: 30px;
+}
+
+.icon1:hover{
+	color: blue;
+}
+.icon2:hover{
+	color: green;
+}
+.icon3:hover{
+	color: red;
+}
+
+.card:hover{
+	background-color: rgb(242, 251, 255);
 }
