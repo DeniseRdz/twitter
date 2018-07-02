@@ -40,7 +40,7 @@
                                 <img class="borderRad" src="/assets/images/profile.png" alt="img">
                         </button>
                         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                          <button class="dropdown-item" >Oscar Recio <br> @OscarRecio</button>
+                          <button routerLink="/profile" class="dropdown-item" >Oscar Recio <br> @OscarRecio</button>
                           <hr>
                           <button class="dropdown-item" routerLink="/editProfile" >
                                 <i class="fas fa-user"></i>
@@ -133,7 +133,7 @@
                     </button>
                     
                     <!-- <button (click)="tweet()"class="btn btn-success buttonRad textWhite fontSize" type="submit">Twittear</button> -->
-                    <button class="btn btn-success buttonRad textWhite fontSize" type="submit">Twittear</button>
+                    <button (click)="tweet()"  class="btn btn-success buttonRad textWhite fontSize" type="submit">Twittear</button>
                     
 
                 </div>
