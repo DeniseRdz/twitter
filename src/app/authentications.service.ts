@@ -8,25 +8,25 @@ import { AngularFireAuth } from 'angularfire2/auth';
 
 export class AuthenticationsService {
 
-  constructor(public angularFireDatabase : AngularFireDatabase, public angularFireAuth: AngularFireAuth) { }
+  constructor(public angularFireDatabase: AngularFireDatabase, public angularFireAuth: AngularFireAuth) { }
 
-  emailRegistration(email,password){
-    return this.angularFireAuth.auth.createUserAndRetrieveDataWithEmailAndPassword(email,password);
+  emailRegistration(email, password) {
+    return this.angularFireAuth.auth.createUserAndRetrieveDataWithEmailAndPassword(email, password);
   }
 
-  Login(email,password){
-    return this.angularFireAuth.auth.signInWithEmailAndPassword(email,password);
+  Login(email, password) {
+    return this.angularFireAuth.auth.signInWithEmailAndPassword(email, password);
   }
 
-  resetPassword(email){
+  resetPassword(email) {
     return this.angularFireAuth.auth.sendPasswordResetEmail(email);
   }
 
-  getStatus(){
+  getStatus() {
     return this.angularFireAuth.authState;
   }
 
-  logOut(){
+  logOut() {
     return this.angularFireAuth.auth.signOut();
   }
 

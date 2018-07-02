@@ -14,14 +14,13 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class AppComponent {
   title = 'app';
-  userId:string;
+  userId: string;
   suscribeCheck;
   closeResult: string;
   tweetText: string;
 
-  constructor(public homeComponent: HomeComponent, private modalService: NgbModal, public router: Router, public autenticationService: AuthenticationsService) {
-    this.userId=localStorage.getItem('Subscribe');
-    homeComponent.tweet(this.tweetText);
+  constructor(private modalService: NgbModal, public router: Router, public autenticationService: AuthenticationsService) {
+    this.userId = localStorage.getItem('Subscribe');
     const promise = this.autenticationService.getStatus();
 
     promise.subscribe((suscribe) => {
